@@ -4,6 +4,7 @@ import React, { useEffect, useId, useState } from 'react';
 import Link from 'next/link';
 import { FaLinkedinIn, FaInstagram, FaFacebookF } from 'react-icons/fa';
 import { SiAppstore, SiGoogleplay } from 'react-icons/si';
+import Image from 'next/image';
 
 // ---------- Types ----------
 type LinkItem = { label: string; href: string };
@@ -145,26 +146,28 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className='mt-20 bg-[#0F1A1B] text-slate-200'>
+    <footer className=' bg-[#0F1A1B] text-slate-200'>
       <div className='mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8'>
         {/* Top grid */}
         <div className='grid grid-cols-1 gap-10 py-10 md:grid-cols-12'>
           {/* Brand & about */}
           <div className='md:col-span-5 lg:col-span-5'>
-            <div className='flex items-center gap-3'>
-              {/* Placeholder logo circle */}
-              <div className='flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#0F1A1B] font-bold'>
-                CD
+            <Link
+              href='/'
+              className='flex items-center gap-2'
+              aria-label='CoorDeck Technologies'
+            >
+              <div className='  items-center justify-center '>
+                <Image
+                  src='/images/Group 1000008350 (1).png'
+                  alt='CoorDeck Logo'
+                  width={180}
+                  height={40}
+                  className='object-contain'
+                  priority
+                />
               </div>
-              <div>
-                <p className='text-lg font-semibold text-white leading-tight'>
-                  CoorDeck
-                </p>
-                <p className='-mt-0.5 text-[12px] uppercase tracking-[.18em] text-slate-300/80'>
-                  Technologies
-                </p>
-              </div>
-            </div>
+            </Link>
             <p className='mt-5 max-w-md text-[14px] leading-relaxed text-slate-300/90'>
               CoorDeck is a B2B construction project management software
               tailored for managers, contractors, and workers.

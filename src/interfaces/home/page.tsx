@@ -1,9 +1,18 @@
+import FixWhatSlowSection from '@/components/fixWhat-slow-section';
+import HeroSection from '@/components/hero-section';
+import HowItWorksSection from '@/components/howIt-works-section/page';
+import HeroConnectedSection from '@/components/jero-connected-section/page';
+import TemporaryWorksFeatureDuo from '@/components/temporary-works-featureDuo/page';
+
 export default function Home() {
   return (
     <div>
-      <h4 className=' text-3xl font-bold text-center text-amber-300'>
-        shakil monsi
-      </h4>
+      <HeroConnectedSection></HeroConnectedSection>
+      <HeroSection></HeroSection>
+
+      <TemporaryWorksFeatureDuo></TemporaryWorksFeatureDuo>
+      <FixWhatSlowSection></FixWhatSlowSection>
+      <HowItWorksSection></HowItWorksSection>
     </div>
   );
 }
