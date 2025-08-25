@@ -31,12 +31,12 @@ export default function HeroConnectedSection() {
       <div className='relative z-10 flex h-full items-center'>
         <div className='w-full mx-auto max-w-7xl px-5 sm:px-8 lg:px-12'>
           <div className='max-w-xl sm:max-w-2xl lg:max-w-3xl'>
-            <h1 className='text-white font-extrabold tracking-tight leading-[1.05] text-4xl sm:text-5xl lg:text-6xl'>
+            <h1 className='text-[#FFF] font-[800] tracking-tight leading-[1.05]  text-4xl sm:text-5xl lg:text-[57px]'>
               Connected Teams
               <br />
               Coordinated Projects
             </h1>
-            <p className='mt-4 text-neutral-200 text-base sm:text-lg lg:text-xl leading-relaxed'>
+            <p className='mt-4 text-[#FFF] text-base sm:text-lg lg:text-[22px]  font-[500] leading-relaxed'>
               Manage your sites, coordinate teams, and keep every task on track.
               Your all-in-one solution for seamless construction Project
               management.
@@ -44,7 +44,8 @@ export default function HeroConnectedSection() {
             <div className='mt-6'>
               <Link
                 href='/demo'
-                className='inline-flex h-12 sm:h-14 px-6 sm:px-8 rounded-full bg-sky-500 hover:bg-sky-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sky-500 text-white font-semibold text-sm sm:text-base items-center justify-center transition'
+                className='inline-flex py-[10px] px-[48px] text-[16px]  font-[700] rounded-[30px] bg-[#00A3E0] hover:bg-sky-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sky-500 text-white  text-sm sm:text-base items-center justify-center 
+                transition'
               >
                 Book a Demo
               </Link>
@@ -112,7 +113,7 @@ export default function HeroConnectedSection() {
         {/* Navigation button নিচে */}
         <button
           aria-label='Next slide'
-          className='hero-next absolute left-1/2 -translate-x-1/2 bottom-6 z-20 h-10 w-10 rounded-full bg-gray-800/85 hover:bg-gray-900/90 flex items-center justify-center shadow-lg backdrop-blur transition-all duration-200'
+          className='hero-next absolute left-1/2 -translate-x-1/2 bottom-6 z-20 h-10 w-10 text-white rounded-full bg-gray-800/85 hover:bg-gray-900/90 flex items-center justify-center shadow-lg backdrop-blur transition-all duration-200'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'

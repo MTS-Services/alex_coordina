@@ -26,7 +26,10 @@ const HowItWorksSection = () => {
           </p>
 
           {/* Button */}
-          <button className='w-full sm:w-auto max-w-[240px] py-3 px-10 bg-sky-500 hover:bg-sky-600 transition-all rounded-full flex items-center justify-center'>
+          <button
+            className='inline-flex py-[10px] px-[48px] text-[16px]  font-[700] rounded-[30px] bg-[#00A3E0] hover:bg-sky-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sky-500 text-white  text-sm sm:text-base items-center justify-center 
+                transition'
+          >
             <span className='text-white text-base font-bold tracking-tight'>
               Book a Demo
             </span>

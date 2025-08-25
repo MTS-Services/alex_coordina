@@ -182,7 +182,7 @@ export default function Header() {
         <div className='md:hidden border-t border-gray-200 bg-white'>
           <div className='mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8'>
             <details className='group'>
-              <summary className='flex cursor-pointer list-none items-center justify-between py-2 text-sm font-medium text-gray-700'>
+              <summary className='flex text-[#222222] font-[600] text-[16px] cursor-pointer list-none items-center justify-between py-2 text-sm '>
                 <span>Products</span>
                 <FiChevronDown className='transition-transform group-open:rotate-180' />
               </summary>
@@ -203,14 +203,14 @@ export default function Header() {
 
             <Link
               href='/resources'
-              className='block py-2 text-sm font-medium text-gray-700'
+              className='block py-2 text-[#222222] font-[600] text-[16px]'
               onClick={() => setMobileOpen(false)}
             >
               Resources
             </Link>
             <Link
               href='/about'
-              className='block py-2 text-sm font-medium text-gray-700'
+              className='block py-2 text-[#222222] font-[600] text-[16px] '
               onClick={() => setMobileOpen(false)}
             >
               About
