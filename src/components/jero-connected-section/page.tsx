@@ -12,13 +12,11 @@ import {
   Autoplay,
 } from 'swiper/modules';
 
-// Swiper এর প্রয়োজনীয় CSS
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 export default function HeroConnectedSection() {
-  // এক জায়গায় কনটেন্ট লিখে রাখলাম
   const slideContent = (
     <div className='relative w-full h-[560px] lg:h-[640px] xl:h-[720px]'>
       <Image
@@ -58,68 +56,81 @@ export default function HeroConnectedSection() {
   );
 
   return (
-    <section className='relative isolate min-h-[560px] lg:min-h-[640px] xl:min-h-[720px] overflow-hidden'>
-      <Swiper
-        modules={[Navigation, Pagination, Keyboard, Mousewheel, Autoplay]}
-        slidesPerView={1}
-        speed={700}
-        loop
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
-        keyboard={{ enabled: true }}
-        mousewheel={{ forceToAxis: true }}
-        pagination={{ el: '.hero-pagination', clickable: true }}
-        navigation={{ nextEl: '.hero-next', prevEl: '.hero-prev' }}
-        className='w-full h-full'
-      >
-        {/* একই কনটেন্ট ৫ বার রিপিট করলাম */}
-        {[...Array(5)].map((_, i) => (
-          <SwiperSlide key={i}>{slideContent}</SwiperSlide>
-        ))}
-      </Swiper>
-
-      {/* Pagination (ডান পাশে) */}
-      <div className='hero-pagination absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 flex flex-col items-center gap-3' />
-
-      {/* Navigation button নিচে */}
-      <button
-        aria-label='Next slide'
-        className='hero-next absolute left-1/2 -translate-x-1/2 bottom-6 z-20 h-10 w-10 rounded-full bg-gray-800/85 hover:bg-gray-900/90 flex items-center justify-center shadow-lg backdrop-blur'
-      >
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          className='h-5 w-5 stroke-white'
-          fill='none'
-          viewBox='0 0 24 24'
-        >
-          <path
-            stroke='currentColor'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            strokeWidth='2'
-            d='m6 9 6 6 6-6'
-          />
-        </svg>
-      </button>
-      <button className='hero-prev hidden' aria-label='Previous slide' />
-
-      {/* Bullet styling */}
+    <>
+      {/* Pagination ডটগুলোর জন্য গ্লোবাল CSS */}
       <style jsx global>{`
-        .hero-pagination .swiper-pagination-bullet {
+        .hero-swiper .swiper-pagination {
+          position: absolute;
+          right: 0.75rem; /* ✅ ডান পাশে */
+          left: auto;
+          top: 60%;
+          transform: translateY(-50%);
+          width: auto;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          z-index: 30;
+        }
+
+        .hero-swiper .swiper-pagination-bullet {
           width: 8px;
           height: 8px;
-          border-radius: 50%;
-          background: rgba(255, 255, 255, 0.8);
+          border-radius: 9999px;
+          background: rgba(255, 255, 255, 0.9);
           opacity: 1;
+          margin: 0;
           transition: all 0.25s ease;
         }
-        .hero-pagination .swiper-pagination-bullet-active {
-          width: 10px;
-          height: 24px;
-          border-radius: 9999px;
-          background: #38bdf8;
-          box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
+        .hero-swiper .swiper-pagination-bullet-active {
+          width: 10px !important;
+          height: 24px !important;
+          border-radius: 12px !important;
+          background: #38bdf8 !important; /* sky-500 */
+          box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2) !important;
         }
       `}</style>
-    </section>
+
+      <section className='relative isolate min-h-[560px] lg:min-h-[640px] xl:min-h-[720px] overflow-hidden'>
+        <Swiper
+          modules={[Navigation, Pagination, Keyboard, Mousewheel, Autoplay]}
+          slidesPerView={1}
+          speed={700}
+          loop
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          keyboard={{ enabled: true }}
+          mousewheel={{ forceToAxis: true }}
+          pagination={{ clickable: true, type: 'bullets' }}
+          navigation={{ nextEl: '.hero-next', prevEl: '.hero-prev' }}
+          className='w-full h-full hero-swiper'
+        >
+          {[...Array(5)].map((_, i) => (
+            <SwiperSlide key={i}>{slideContent}</SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* Navigation button নিচে */}
+        <button
+          aria-label='Next slide'
+          className='hero-next absolute left-1/2 -translate-x-1/2 bottom-6 z-20 h-10 w-10 rounded-full bg-gray-800/85 hover:bg-gray-900/90 flex items-center justify-center shadow-lg backdrop-blur transition-all duration-200'
+        >
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            className='h-5 w-5 stroke-white'
+            fill='none'
+            viewBox='0 0 24 24'
+          >
+            <path
+              stroke='currentColor'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth='2'
+              d='m6 9 6 6 6-6'
+            />
+          </svg>
+        </button>
+        <button className='hero-prev hidden' aria-label='Previous slide' />
+      </section>
+    </>
   );
 }
