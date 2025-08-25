@@ -253,7 +253,7 @@ const BookDemoPage = () => {
               <Image
                 src={'/images/bookdemo/QR.png'}
                 alt='Coordeck mobile app interface'
-                className='absolute left-0 top-1/2 -translate-y-1/2 h-72 w-auto rounded-xl border-[6px] border-gray-300 object-contain shadow-lg'
+                className='absolute -left-4.5 top-49 -translate-y-1/2 h-78 w-auto rounded-xl border-[6px] border-gray-300 object-contain shadow-lg'
                 width={132}
                 height={288}
               />
