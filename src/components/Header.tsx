@@ -26,6 +26,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
+  // =================code by shakil munshi==============
   // outside-click to close dropdown
   useEffect(() => {
     const onDoc = (e: MouseEvent) => {
@@ -36,6 +37,7 @@ export default function Header() {
     return () => document.removeEventListener('mousedown', onDoc);
   }, []);
 
+  // =================code by shakil munshi==============
   // Esc to close dropdown
   useEffect(() => {
     const onEsc = (e: KeyboardEvent) =>

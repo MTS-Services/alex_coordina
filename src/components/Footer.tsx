@@ -5,8 +5,9 @@ import Link from 'next/link';
 import { FaLinkedinIn, FaInstagram, FaFacebookF } from 'react-icons/fa';
 import { SiAppstore, SiGoogleplay } from 'react-icons/si';
 import Image from 'next/image';
-
+// =================code by shakil munshi==============
 // ---------- Types ----------
+// ====================================================
 type LinkItem = { label: string; href: string };
 type SectionDef = { title: string; items: LinkItem[]; aria?: string };
 
@@ -38,6 +39,7 @@ const SECTIONS: SectionDef[] = [
 ];
 
 // ---------- UI primitives ----------
+// =================code by shakil munshi==============
 function SocialIcon({
   label,
   href = '#',
@@ -71,8 +73,10 @@ function Section({
 }) {
   const id = useId().replace(':', '');
   const [open, setOpen] = useState(false);
+  // =================code by shakil munshi==============
 
   // Close dropdown with Escape key (mobile)
+
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if (e.key === 'Escape') setOpen(false);
