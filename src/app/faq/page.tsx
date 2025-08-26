@@ -46,7 +46,7 @@ const faqData = [
 
 const FaqPage = () => {
   return (
-    <main className='flex flex-col items-center justify-start px-6 py-36 pb-4'>
+    <main className='flex flex-col items-center justify-start px-6 py-36 pb-18 '>
       <div className='w-full max-w-4xl'>
         <section className='flex flex-col items-center gap-14'>
           <h1 className='text-center text-3xl font-extrabold leading-9 text-neutral-800'>

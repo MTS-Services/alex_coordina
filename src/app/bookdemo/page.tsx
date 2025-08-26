@@ -221,8 +221,8 @@ const BookDemoPage = () => {
 
   return (
     <>
-      <main className='flex items-center justify-center px-4 py-36 pb-4 sm:px-8'>
-        <div className='flex w-full max-w-7xl flex-col items-center justify-center gap-16 lg:flex-row lg:items-stretch lg:justify-between lg:gap-12'>
+      <main className='flex items-center justify-center px-4 py-36 pb-18 sm:px-8'>
+        <div className='flex w-full max-w-6xl flex-col items-center justify-center gap-16 lg:flex-row lg:items-stretch lg:justify-between lg:gap-12'>
           <div className='flex w-full flex-col items-start gap-9 lg:w-1/2'>
             <div className='flex flex-col items-start gap-4'>
               <h1 className='text-3xl font-bold leading-9 text-neutral-800'>
@@ -253,7 +253,7 @@ const BookDemoPage = () => {
               <Image
                 src={'/images/bookdemo/QR.png'}
                 alt='Coordeck mobile app interface'
-                className='absolute left-0 top-1/2 -translate-y-1/2 h-72 w-auto rounded-xl border-[6px] border-gray-300 object-contain shadow-lg'
+                className='absolute -left-3.5 top-44 -translate-y-1/2 h-68 w-auto rounded-xl border-[6px] border-gray-300 object-contain shadow-lg'
                 width={132}
                 height={288}
               />

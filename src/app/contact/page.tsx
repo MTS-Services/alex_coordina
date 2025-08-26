@@ -3,7 +3,7 @@ import { FiMail, FiPhone, FiLinkedin, FiFacebook } from 'react-icons/fi';
 
 const ContactPage = () => {
   return (
-    <main className='flex items-center justify-center px-6 py-36 pb-4 sm:px-16'>
+    <main className='flex items-center justify-center px-6 py-36 pb-18 sm:px-16'>
       <div className='flex w-full max-w-6xl flex-col items-center justify-center gap-16 lg:flex-row lg:items-start lg:justify-between lg:gap-24'>
         <div className='flex w-full max-w-lg flex-col items-start gap-12'>
           <div className='flex flex-col items-start gap-4'>
