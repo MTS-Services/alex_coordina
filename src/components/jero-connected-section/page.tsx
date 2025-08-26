@@ -58,11 +58,10 @@ export default function HeroConnectedSection() {
 
   return (
     <>
-      {/* Pagination ডটগুলোর জন্য গ্লোবাল CSS */}
       <style jsx global>{`
         .hero-swiper .swiper-pagination {
           position: absolute;
-          right: 0.75rem; /* ✅ ডান পাশে */
+          right: 0.75rem; /* ✅  */
           left: auto;
           top: 60%;
           transform: translateY(-50%);
@@ -110,7 +109,6 @@ export default function HeroConnectedSection() {
           ))}
         </Swiper>
 
-        {/* Navigation button নিচে */}
         <button
           aria-label='Next slide'
           className='hero-next absolute left-1/2 -translate-x-1/2 bottom-6 z-20 h-10 w-10 text-white rounded-full bg-gray-800/85 hover:bg-gray-900/90 flex items-center justify-center shadow-lg backdrop-blur transition-all duration-200'
