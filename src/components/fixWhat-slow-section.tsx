@@ -5,7 +5,7 @@ import React from 'react';
 const FixWhatSlowSection = () => {
   return (
     <section className='bg-gray-900'>
-      <div className='mx-auto max-w-[1304px] px-4 py-12 sm:px-6 md:py-16 lg:px-8'>
+      <div className='mx-auto max-w-[1304px] px-4 pt-12 pb-13 sm:px-6 md:pt-[72px]  md:pb-19 lg:px-8'>
         {/* Heading */}
         <div className='mx-auto flex max-w-[690px] flex-col items-center gap-4 text-center'>
           <h2 className='text-2xl font-extrabold leading-9 text-white sm:text-3xl'>
@@ -19,7 +19,7 @@ const FixWhatSlowSection = () => {
         </div>
 
         {/* Cards */}
-        <div className='mt-16 grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 xl:grid-cols-4'>
+        <div className='mt-[68px] grid grid-cols-1 gap-6 sm:gap-[36px] md:grid-cols-2 xl:grid-cols-4'>
           {/* Card 1 */}
           <div className='rounded-[20px] bg-gray-800 p-6 transition duration-200 hover:shadow-lg'>
             <h3 className='text-xl font-extrabold leading-9 text-gray-100'>
