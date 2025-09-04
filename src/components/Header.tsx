@@ -9,7 +9,7 @@ import { MdOutlineArrowDropDown } from 'react-icons/md';
 type DropItem = { label: string; href: string };
 
 const PRODUCTS: DropItem[] = [
-  { label: 'Temporary Works', href: '/products/temporary-works' },
+  { label: 'Temporary Works', href: '/temporary-works-page' },
   { label: 'Asset Management', href: '/products/asset-management' },
   { label: 'Logistics', href: '/products/logistics' },
   { label: 'Access Control', href: '/products/access-control' },
