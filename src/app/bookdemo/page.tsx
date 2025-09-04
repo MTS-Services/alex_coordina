@@ -171,7 +171,6 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { GoDotFill } from 'react-icons/go';
-import { FiX } from 'react-icons/fi';
 
 const demoBenefits = [
   'A live walkthrough of key features like Temporary Works, Site Management, and QR Code integration',
@@ -221,7 +220,10 @@ const BookDemoPage = () => {
 
   return (
     <>
-      <main className='flex items-center justify-center px-4 py-36 pb-18 sm:px-8'>
+      <main
+        id='/bookdemo'
+        className='flex items-center justify-center px-4 py-36 pb-18 sm:px-8'
+      >
         <div className='flex w-full max-w-6xl flex-col items-center justify-center gap-16 lg:flex-row lg:items-stretch lg:justify-between lg:gap-12'>
           <div className='flex w-full flex-col items-start gap-9 lg:w-1/2'>
             <div className='flex flex-col items-start gap-4'>
