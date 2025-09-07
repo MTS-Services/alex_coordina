@@ -91,7 +91,7 @@ const FixWhatSlowSection = () => {
         </div>
 
         {/* Cards */}
-        <div className="md:mt-[68px] mt-[40px] grid grid-cols-1 gap-6 sm:gap-[36px] md:grid-cols-2 xl:grid-cols-4 sm:mb-0 mb-6">
+        <div className="md:mt-[68px] mt-[40px] grid grid-cols-1 md:gap-6 gap-4 sm:gap-[36px] md:grid-cols-2 xl:grid-cols-4 sm:mb-0 mb-6">
           {/* Card 1 */}
           <div className="rounded-[20px] bg-gray-800 p-6 transition duration-200 hover:shadow-lg">
             <h3 className="lg:text-xl text-lg xl:font-extrabold font-bold leading-9 text-gray-100">
@@ -104,7 +104,7 @@ const FixWhatSlowSection = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="rounded-[20px] bg-gray-800 p-6 transition duration-200 hover:shadow-lg">
+          <div className="rounded-[20px] bg-gray-800 md:p-6 p-4 transition duration-200 hover:shadow-lg">
             <h3 className="lg:text-xl text-lg xl:font-extrabold font-bold leading-9 text-gray-100">
               Smarter On-Site Coordination
             </h3>
@@ -115,7 +115,7 @@ const FixWhatSlowSection = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="rounded-[20px] bg-gray-800 p-6 transition duration-200 hover:shadow-lg">
+          <div className="rounded-[20px] bg-gray-800 md:p-6 p-4 transition duration-200 hover:shadow-lg">
             <h3 className="lg:text-xl text-lg xl:font-extrabold font-bold leading-9 text-gray-100">
               Built-In Compliance Tracking
             </h3>
@@ -126,7 +126,7 @@ const FixWhatSlowSection = () => {
           </div>
 
           {/* Card 4 */}
-          <div className="rounded-[20px] bg-gray-800 p-6 transition duration-200 hover:shadow-lg">
+          <div className="rounded-[20px] bg-gray-800 md:p-6 p-4 transition duration-200 hover:shadow-lg">
             <h3 className="lg:text-xl text-lg xl:font-extrabold font-bold leading-9 text-gray-100">
               Centralized Document Control
             </h3>

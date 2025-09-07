@@ -140,19 +140,19 @@ export default function TemporaryWorksFeatureDuo() {
         />
       </div>
 
-      <div className='relative mx-auto max-w-7xl px-4 md:py-20 my-10 md:px-4 lg:px-6'>
+      <div className='relative mx-auto max-w-7xl px-4 md:py-20 my-8 md:px-4 lg:px-6'>
         {/* Block 1: Copy left, media right */}
-        <div className='grid items-center gap-10 md:grid-cols-2 lg:gap-24'>
+        <div className='grid items-center md:gap-10 gap-4 md:grid-cols-2 lg:gap-24'>
           <div className='order-2 md:order-1'>
             <h2 className='text-2xl sm:text-3xl font-extrabold text-neutral-800 tracking-tight'>
               Streamline Temporary Works Management
             </h2>
-            <p className='mt-4 text-base leading-7 text-neutral-700'>
+            <p className='md:mt-4 mt-2 text-base leading-7 text-neutral-700'>
               Create, track, and close out TW assets with structured
               workflows—from initial design to permits, approvals, and final
               striking—built for site safety and compliance.
             </p>
-            <div className='md:mt-6 mt-4'>
+            <div className='md:mt-6 mt-3'>
               <Link
                 href='/temporary-works'
                 className='inline-flex h-10 items-center justify-center rounded-full border border-gray-300 px-4 text-sm font-semibold leading-tight text-teal-950 transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-teal-600/30'
@@ -173,7 +173,7 @@ export default function TemporaryWorksFeatureDuo() {
                 className='h-auto w-full object-cover'
               />
             </div>
-            <div className='absolute right-3 bottom-[-12%] md:right-[-6%] md:bottom-[-8%] w-28 sm:w-36 overflow-hidden'>
+            <div className='absolute -right-3 bottom-[-10%] md:right-[-6%] md:bottom-[-6%] w-28 sm:w-36 overflow-hidden'>
               <Image
                 src='/images/phoneversion.png'
                 alt='TW mobile view'
@@ -187,10 +187,10 @@ export default function TemporaryWorksFeatureDuo() {
         </div>
 
         {/* Spacer */}
-        <div className='mt-24' />
+        <div className='md:mt-24 mt-8' />
 
         {/* Block 2: Media left, copy right */}
-        <div className='grid items-center gap-10 md:grid-cols-2 lg:gap-28'>
+        <div className='grid items-center md:gap-10 gap-4 md:grid-cols-2 lg:gap-28'>
           <div className='relative'>
             <div className='relative w-full  overflow-hidden'>
               <Image
@@ -208,11 +208,11 @@ export default function TemporaryWorksFeatureDuo() {
             <h2 className='text-2xl sm:text-3xl font-extrabold text-neutral-800 tracking-tight'>
               Organize and Navigate <span className='block'>Every Site</span>
             </h2>
-            <p className='mt-4 text-base leading-7 text-neutral-700'>
+            <p className='md:mt-4 mt-2 text-base leading-7 text-neutral-700'>
               Create sites, areas, and zones, view drawings by location, and
               draw asset polygons within zones for precise on‑site planning.
             </p>
-            <div className='mt-6'>
+            <div className='md:mt-6 mt-4'>
               <Link
                 href='/site-planning'
                 className='inline-flex h-10 items-center justify-center rounded-full border border-gray-300 px-6 text-sm font-semibold leading-tight text-teal-950 transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-teal-600/30'
