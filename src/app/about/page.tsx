@@ -78,9 +78,9 @@ const teamMembers = [
 
 const AboutPage = () => {
   return (
-    <main className="flex flex-col items-center justify-start px-6 py-36 pb-18 h-screen">
+    <main className="flex flex-col items-center justify-start px-6 md:pt-[120px] pt-[140px] mb-[700px] h-screen">
       <div className="w-full max-w-3xl">
-        <section className="flex flex-col items-center gap-16">
+        <section className="flex flex-col items-center md:gap-16 gap-12">
           <div className="flex flex-col items-center gap-4 text-center">
             <h1 className="text-3xl font-bold leading-9 text-neutral-800">
               About Us
