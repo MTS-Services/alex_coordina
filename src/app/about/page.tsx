@@ -93,6 +93,13 @@ const AboutPage = () => {
               planning to asset tracking. Built to meet the demands of real
               jobsite conditions, Coordeck ensures your projects remain on
               track, compliant, and well-managed.
+              Coordeck is a B2B construction project management platform
+              designed specifically for managers, contractors, and workers. We
+              assist teams in coordinating temporary works, managing documents,
+              and overseeing on-site activities all in one place, from site
+              planning to asset tracking. Built to meet the demands of real
+              jobsite conditions, Coordeck ensures your projects remain on
+              track, compliant, and well-managed.
             </p>
           </div>
 
