@@ -180,7 +180,7 @@ export default function TemporaryWorksFeatureDuo() {
                 width={320}
                 height={640}
                 sizes='(min-width: 640px) 144px, 112px'
-                className='h-auto w-full object-cover'
+               className="w-full md:h-auto h-[40%] object-cover"
               />
             </div>
           </div>

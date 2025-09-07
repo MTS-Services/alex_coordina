@@ -13,7 +13,7 @@ type SectionDef = { title: string; items: LinkItem[]; aria?: string };
 
 // ---------- Data ----------
 const PRODUCT_LINKS: LinkItem[] = [
-  { label: 'Temporary Works', href: '/products/temporary-works' },
+  { label: 'Temporary Works', href: '/temporary' },
   { label: 'Asset Management', href: '/products/asset-management' },
   { label: 'Logistics', href: '/products/logistics' },
   { label: 'Access Control', href: '/products/access-control' },

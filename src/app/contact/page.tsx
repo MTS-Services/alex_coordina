@@ -3,10 +3,10 @@ import { FiMail, FiPhone, FiLinkedin, FiFacebook } from 'react-icons/fi';
 
 const ContactPage = () => {
   return (
-    <main className='flex items-center justify-center px-6 py-36 pb-18 sm:px-16'>
-      <div className='flex w-full max-w-6xl flex-col items-center justify-center gap-16 lg:flex-row lg:items-start lg:justify-between lg:gap-24'>
-        <div className='flex w-full max-w-lg flex-col items-start gap-12'>
-          <div className='flex flex-col items-start gap-4'>
+    <main className='flex items-center justify-center px-6 md:py-36 pt-24 pb-8'>
+      <div className='flex w-full max-w-6xl flex-col items-center justify-center md:gap-16 gap-8 lg:flex-row lg:items-start lg:justify-between lg:gap-24'>
+        <div className='flex w-full max-w-lg flex-col items-start md:gap-12 gap-5'>
+          <div className='flex flex-col items-start md:gap-4 gap-2'>
             <h1 className='text-3xl font-bold leading-9 text-neutral-800'>
               Contact Us
             </h1>
@@ -17,11 +17,11 @@ const ContactPage = () => {
               love to hear from you.
             </p>
           </div>
-          <div className='flex flex-col items-start gap-8'>
+          <div className='flex flex-col items-start md:gap-8 gap-5'>
             <h2 className='text-xl font-semibold leading-7 text-neutral-800'>
               Contacts
             </h2>
-            <div className='flex flex-col items-start gap-6'>
+            <div className='flex flex-col items-start md:gap-6 gap-3'>
               <a
                 href='mailto:Info@coordeck.com'
                 className='group flex items-center gap-6'
@@ -41,18 +41,18 @@ const ContactPage = () => {
                 </span>
               </a>
             </div>
-            <div className='flex items-center gap-10'>
+            <div className='flex items-center md:gap-10 gap-6'>
               <a
                 href='#'
                 aria-label='LinkedIn'
-                className='text-neutral-600 transition-colors hover:text-neutral-900'
+                className='text-neutral-600 transition-colors hover:text-[#00A3E0]'
               >
                 <FiLinkedin className='h-6 w-6' />
               </a>
               <a
                 href='#'
                 aria-label='Facebook'
-                className='text-neutral-600 transition-colors hover:text-neutral-900'
+                className='text-neutral-600 transition-colors hover:text-[#00A3E0]'
               >
                 <FiFacebook className='h-6 w-6' />
               </a>
@@ -61,8 +61,8 @@ const ContactPage = () => {
         </div>
 
         <div className='w-full max-w-lg flex-shrink-0'>
-          <form className='flex flex-col items-center gap-4 rounded-2xl bg-slate-50 p-8'>
-            <div className='flex w-full flex-col gap-8'>
+          <form className='flex flex-col items-center gap-4 rounded-2xl bg-slate-50 md:p-8 p-5'>
+            <div className='flex w-full flex-col md:gap-8 gap-4'>
               <div className='flex flex-col gap-1'>
                 <label
                   htmlFor='fullName'
