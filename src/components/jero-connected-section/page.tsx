@@ -31,7 +31,7 @@ export default function HeroConnectedSection() {
       <div className='relative z-10 flex h-full items-center'>
         <div className='w-full mx-auto max-w-7xl px-5 sm:px-8 lg:px-12'>
           <div className='max-w-xl sm:max-w-2xl lg:max-w-3xl'>
-            <h1 className='text-[#FFF] font-[800] tracking-tight leading-[1.05]  text-4xl sm:text-5xl lg:text-[57px]'>
+            <h1 className='text-[#FFF] md:font-[800] font-semibold tracking-tight leading-[1.05]  text-4xl sm:text-5xl lg:text-[57px]'>
               Connected Teams
               <br />
               Coordinated Projects
