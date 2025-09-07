@@ -9,7 +9,7 @@ import { MdOutlineArrowDropDown } from 'react-icons/md';
 type DropItem = { label: string; href: string };
 
 const PRODUCTS: DropItem[] = [
-  { label: 'Temporary Works', href: '/products/temporary-works' },
+  { label: 'Temporary Works', href: '/temporary-works-page' },
   { label: 'Asset Management', href: '/products/asset-management' },
   { label: 'Logistics', href: '/products/logistics' },
   { label: 'Access Control', href: '/products/access-control' },
@@ -147,7 +147,7 @@ export default function Header() {
                 Sign in
               </Link>
               <Link
-                href='/book-demo'
+                href='/bookdemo'
                 className='inline-flex items-center rounded-full bg-gray-900 px-4 py-[10px] text-sm font-[600] text-white hover:bg-gray-800'
               >
                 Book a Demo
@@ -188,7 +188,7 @@ export default function Header() {
                 <span>Products</span>
                 <FiChevronDown className='transition-transform group-open:rotate-180' />
               </summary>
-              <ul className='pb-2'>
+              <ul className='pb-0.5'>
                 {PRODUCTS.map((it) => (
                   <li key={it.href}>
                     <Link
@@ -229,7 +229,7 @@ export default function Header() {
                 Sign in
               </Link>
               <Link
-                href='/book-demo'
+                href='/bookdemo'
                 className='inline-flex flex-1 items-center justify-center rounded-full bg-gray-900 px-4 py-2 text-sm font-bold text-white hover:bg-gray-800'
                 onClick={() => setMobileOpen(false)}
               >

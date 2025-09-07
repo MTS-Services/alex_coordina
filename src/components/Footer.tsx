@@ -24,7 +24,6 @@ const PRODUCT_LINKS: LinkItem[] = [
 const RESOURCE_LINKS: LinkItem[] = [
   { label: 'FAQ', href: '/faq' },
   { label: 'Blog', href: '/blog' },
-  { label: 'Book Demo', href: '/bookdemo' },
 ];
 
 const ABOUT_LINKS: LinkItem[] = [
