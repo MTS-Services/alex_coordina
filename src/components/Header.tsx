@@ -245,7 +245,7 @@
 
 "use client";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import { MdOutlineArrowDropDown } from "react-icons/md";
@@ -500,7 +500,7 @@ export default function Header() {
       </header>
 
       {/* Floating Button */}
-      <Link href="/next-page">
+      {/* <Link href="/next-page">
         <div className="fixed bottom-6 right-6 w-16 h-16 bg-[#1E2E36] rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer z-50" id="floating-next-btn">
           <Image
             src="/images/last_page_Rounded.png"
@@ -510,7 +510,7 @@ export default function Header() {
             className="object-contain"
           />
         </div>
-      </Link>
+      </Link> */}
     </>
   );
 }
