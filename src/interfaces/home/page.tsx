@@ -7,12 +7,11 @@ import TemporaryWorksFeatureDuo from '@/components/temporary-works-featureDuo/pa
 export default function Home() {
   return (
     <div>
-      <HeroConnectedSection></HeroConnectedSection>
-      <HeroSection></HeroSection>
-
-      <TemporaryWorksFeatureDuo></TemporaryWorksFeatureDuo>
-      <FixWhatSlowSection></FixWhatSlowSection>
-      <HowItWorksSection></HowItWorksSection>
+      <HeroConnectedSection />
+      <HeroSection />
+      <TemporaryWorksFeatureDuo />
+      <FixWhatSlowSection />
+      <HowItWorksSection/>
     </div>
   );
 }
