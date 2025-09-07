@@ -4,7 +4,7 @@ import React from "react";
 const TemporaryWhite = ({ title, des, icon, image, buttonText }) => {
   return (
     <section className="w-full bg-[#F5FAFC] py-14 px-2 sm:px-4 lg:px-8">
-      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row gap-4 sm:gap-6 lg:gap-14 mt-6 px-2 sm:px-6 lg:px-12 items-start lg:items-center">
+      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row gap-4 sm:gap-6 lg:gap-14 mt-6 px-2 sm:px-6 lg:px-12 items-start lg:items-center mb-0 sm:mb-6">
         {/* Image Section */}
         <div className="flex justify-center md:justify-start md:pl-4">
           <div className="w-full max-w-[688px] h-auto rounded-4xl overflow-hidden">
@@ -19,7 +19,7 @@ const TemporaryWhite = ({ title, des, icon, image, buttonText }) => {
         </div>
 
         {/* Text Section */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 ml-0 sm:ml-20">
           {/* Icon & Button Section */}
           <div className="w-[100px] h-[90px] mb-4 sm:mb-2 rounded-xl bg-[#E6F3F7] flex flex-col items-center justify-center gap-1 sm:gap-1.5">
             <Image

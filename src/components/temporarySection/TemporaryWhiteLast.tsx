@@ -6,9 +6,9 @@ import React from "react";
 const TemporaryWhiteLast = ({ title, des, image, buttonText }) => {
   return (
     <section className="w-full min-h-[604px] bg-[#F5FAFC] py-12">
-      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row gap-6 lg:gap-14 items-center mt-6 px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-14 items-center mt-6 px-6 lg:px-12">
         {/* Image Section */}
-        <div className="w-full h-full lg:ml-[-60px]">
+        <div className="w-full h-full lg:ml-4">
           <Image
             src={image}
             alt="Placeholder"
@@ -34,7 +34,7 @@ const TemporaryWhiteLast = ({ title, des, image, buttonText }) => {
       {/* Button */}
       <Link
         href={""}
-        className="w-full sm:w-[200px] h-[56px] font-bold text-center flex justify-center items-center text-[16px] bg-[#00A3E0] rounded-4xl"
+        className="w-full sm:w-[200px] hover:text-[#FFFFFF] h-[56px] font-bold text-center flex justify-center items-center text-[16px] bg-[#00A3E0] rounded-4xl"
       >
         {buttonText}
       </Link>

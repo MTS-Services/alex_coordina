@@ -7,7 +7,7 @@ const Page = () => {
   return (
     <main
       id="temporary-works-page"
-      className="flex flex-col items-center justify-start pt-24 sm:pt-36  "
+      className="flex flex-col items-center justify-start pt-24 sm:pt-26  "
     >
       <div className="w-full max-w-2xl px-4 sm:px-6 mb-8 sm:mb-14  mx-auto">
   <section className="flex flex-col items-center gap-4 sm:gap-12 pt-1 sm:pt-12">
