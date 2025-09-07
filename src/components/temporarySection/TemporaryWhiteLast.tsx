@@ -29,8 +29,8 @@ const TemporaryWhiteLast = ({ title, des, image, buttonText }) => {
           </div>
 
           <Link
-            href={""}
-            className="w-full sm:w-[200px] md:w-[180px] hover:text-[#FFFFFF] h-[56px] font-bold text-center flex justify-center items-center text-[16px] bg-[#00A3E0] rounded-4xl"
+            href={"/bookdemo"}
+            className="w-full sm:w-[200px] md:w-[180px] text-[#FFFFFF] h-[56px] font-bold text-center flex justify-center items-center text-[16px] bg-[#00A3E0] rounded-4xl"
           >
             {buttonText}
           </Link>
