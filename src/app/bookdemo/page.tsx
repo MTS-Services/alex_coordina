@@ -162,11 +162,9 @@
 //     </main>
 //   );
 // };
-
 // export default BookDemoPage;
 
 'use client';
-
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -222,11 +220,11 @@ const BookDemoPage = () => {
     <>
       <main
         id='/bookdemo'
-        className='flex items-center justify-center px-4 py-36 pb-18 sm:px-8'
+        className='flex items-center justify-center px-4 md:py-36 pt-28 md:pb-18 pb-8 sm:px-8'
       >
-        <div className='flex w-full max-w-6xl flex-col items-center justify-center gap-16 lg:flex-row lg:items-stretch lg:justify-between lg:gap-12'>
-          <div className='flex w-full flex-col items-start gap-9 lg:w-1/2'>
-            <div className='flex flex-col items-start gap-4'>
+        <div className='flex w-full max-w-6xl flex-col items-center justify-center md:gap-16 gap-8 lg:flex-row lg:items-stretch lg:justify-between lg:gap-12'>
+          <div className='flex w-full flex-col items-start md:gap-9 gap-5 lg:w-1/2'>
+            <div className='flex flex-col items-start md:gap-4 gap-1'>
               <h1 className='text-3xl font-bold leading-9 text-neutral-800'>
                 Book Your Demo with Coordeck
               </h1>
@@ -251,11 +249,11 @@ const BookDemoPage = () => {
                 ))}
               </ul>
             </div>
-            <div className='relative mt-4 lg:mt-auto flex w-full items-center pl-12'>
+            <div className='relative flex w-full items-center pl-12'>
               <Image
                 src={'/images/bookdemo/QR.png'}
                 alt='Coordeck mobile app interface'
-                className='absolute -left-3.5 top-44 -translate-y-1/2 h-68 w-auto rounded-xl border-[6px] border-gray-300 object-contain shadow-lg'
+                className='absolute md:-left-3.5 md:top-44 left-6 top-28 -translate-y-1/2 md:h-68 h-32 w-auto rounded-xl border-[6px] border-gray-300 object-contain shadow-lg'
                 width={132}
                 height={288}
               />
@@ -272,7 +270,7 @@ const BookDemoPage = () => {
           <div className='flex w-full lg:w-1/2'>
             <form
               onSubmit={handleFormSubmit}
-              className='flex h-full w-full flex-col items-center justify-center gap-6 rounded-3xl bg-[#E9F4F8] p-10'
+              className='flex h-full w-full flex-col items-center justify-center gap-6 rounded-3xl bg-[#E9F4F8] md:p-10 p-7'
             >
               <p className='w-full text-base leading-7 text-neutral-800'>
                 Fill out the form below and we’ll send you a confirmation email
