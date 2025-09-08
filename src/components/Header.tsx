@@ -254,7 +254,7 @@ const PRODUCTS: DropItem[] = [
   {
     label: 'Temporary Works',
     href: '/temporary',
-    id: 'nav-temporary-works',
+    id: 'temporary-works-page',
   },
   {
     label: 'Asset Management',

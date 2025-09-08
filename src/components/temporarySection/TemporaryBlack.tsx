@@ -3,11 +3,11 @@ import React from "react";
 
 const TemporaryBlack = ({ title, des, icon, image, buttonText }) => {
   return (
-    <section className="w-full bg-[#121C21] py-14 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-[#121C21] py-6 sm:py-12 lg:py-14 px-2 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1  md:grid-cols-2  gap-4 sm:gap-6 lg:gap-14 mt-6 px-2 sm:px-6 lg:px-12 items-start lg:items-center mb-0 sm:mb-6">
         {/* Left Side - Text */}
         <div className="flex flex-col ml-0 md:ml-12">
-          <div className="w-[100px] h-[90px] mb-6 rounded-xl bg-[#1E2E36] flex flex-col items-center justify-center gap-2">
+          <div className="w-[80px] h-[70px] py-2 sm:w-[100px] sm:h-[90px] mb-6 sm:mb-6 rounded-xl bg-[#1E2E36] flex flex-col items-center justify-center gap-2">
             <Image
               src={icon}
               alt="icon"
@@ -15,7 +15,7 @@ const TemporaryBlack = ({ title, des, icon, image, buttonText }) => {
               height={24}
               className="object-contain"
             />
-            <h2 className="text-[#FFFFFF] text-[12px] font-medium">
+            <h2 className="text-[#FFFFFF] text-[12px] font-medium ">
               {buttonText}
             </h2>
           </div>

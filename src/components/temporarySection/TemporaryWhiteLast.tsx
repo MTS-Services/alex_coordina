@@ -4,8 +4,8 @@ import React from "react";
 
 const TemporaryWhiteLast = ({ title, des, image, buttonText }) => {
   return (
-    <section className="w-full min-h-[604px] bg-[#F5FAFC] py-12">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 md:gap-10 lg:gap-14 items-center mt-6 px-6 lg:px-12">
+    <section className="w-full min-h-[604px] bg-[#F5FAFC] py-6 sm:py-12 lg:py-14 px-2 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 md:gap-10 lg:gap-14 items-center mt-6 px-2 lg:px-12 ">
         {/* Image Section */}
         <div className="w-full lg:w-1/2 h-full">
           <Image
