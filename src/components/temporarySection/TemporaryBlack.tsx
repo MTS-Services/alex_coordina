@@ -22,7 +22,7 @@ const TemporaryBlack: React.FC<TemporaryBlackProps> = ({
         {/* Left Side - Text */}
         <div className="flex flex-col ml-0 md:ml-6 lg:ml-12">
           {/* Small Icon Box */}
-          <div className="w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] mb-6 rounded-xl bg-[#1E2E36] flex flex-col items-center justify-center gap-2">
+          <div className="w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] md:mb-6 mb-3 rounded-xl bg-[#1E2E36] flex flex-col items-center justify-center gap-2">
             <div className="text-2xl text-white">{icon}</div>
             <h2 className="text-white text-[12px] font-medium">
               {buttonText}
@@ -34,7 +34,7 @@ const TemporaryBlack: React.FC<TemporaryBlackProps> = ({
             <h2 className="text-[22px] md:text-[26px] lg:text-[28px] font-extrabold text-white leading-snug mb-4">
               {title}
             </h2>
-            <p className="text-[15px] md:text-[15.5px] lg:text-[16px] font-medium text-white leading-relaxed mb-4">
+            <p className="text-[15px] md:text-[15.5px] lg:text-[16px] font-medium text-white leading-relaxed">
               {des}
             </p>
           </div>
