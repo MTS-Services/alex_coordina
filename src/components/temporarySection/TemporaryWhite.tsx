@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 import React from "react";
 
@@ -22,13 +23,9 @@ const TemporaryWhite = ({ title, des, icon, image, buttonText }) => {
         <div className="flex flex-col gap-4 md:items-center lg:items-start md:text-center lg:text-left md:ml-0 sm:ml-20 lg:ml-20">
           {/* Icon & Button Section */}
           <div className="w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] mb-2 sm:mb-4 rounded-xl bg-[#E6F3F7] flex flex-col items-center justify-center gap-1 sm:gap-1.5">
-            <Image
-              src={icon}
-              alt="icon"
-              width={28}
-              height={24}
-              className="object-contain"
-            />
+           <div className="text-[#002A3B] text-2xl">
+            {icon}
+           </div>
             <h2 className="text-[#002A3B] text-[12px] font-medium">
               {buttonText}
             </h2>

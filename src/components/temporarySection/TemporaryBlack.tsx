@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 import React from "react";
 
@@ -10,13 +11,9 @@ const TemporaryBlack = ({ title, des, icon, image, buttonText }) => {
         <div className="flex flex-col ml-0 md:ml-12">
           {/* Small Icon Box */}
           <div className="w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] mb-6  rounded-xl bg-[#1E2E36] flex flex-col items-center justify-center gap-2">
-            <Image
-              src={icon}
-              alt="icon"
-              width={28}
-              height={24}
-              className="object-contain"
-            />
+           <div className="text-2xl text-white">
+            {icon}
+           </div>
             <h2 className="text-white text-[12px] font-medium">
               {buttonText}
             </h2>
