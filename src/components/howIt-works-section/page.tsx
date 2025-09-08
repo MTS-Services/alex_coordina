@@ -32,9 +32,8 @@ const HowItWorksSection = () => {
             className='inline-flex py-[10px] px-[48px] text-[16px]  font-[700] rounded-[30px] bg-[#00A3E0] hover:bg-sky-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sky-500 text-white  text-sm sm:text-base items-center justify-center 
                 transition'
           >
-            <Link href={"/bookdemo"} className='text-white text-base font-bold tracking-tight'>
               Book a Demo
-            </Link>
+            
           </button>
           </Link>
         </div>
