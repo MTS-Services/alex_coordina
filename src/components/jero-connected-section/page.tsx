@@ -4,6 +4,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { IoIosArrowDown } from "react-icons/io";
+
 import {
   Navigation,
   Pagination,
@@ -113,20 +115,7 @@ export default function HeroConnectedSection() {
           aria-label='Next slide'
           className='hero-next absolute left-1/2 -translate-x-1/2 bottom-6 z-20 h-10 w-10 text-white rounded-full bg-gray-800/85 hover:bg-gray-900/90 flex items-center justify-center shadow-lg backdrop-blur transition-all duration-200'
         >
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            className='h-5 w-5 stroke-white'
-            fill='none'
-            viewBox='0 0 24 24'
-          >
-            <path
-              stroke='currentColor'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              d='m6 9 6 6 6-6'
-            />
-          </svg>
+          <IoIosArrowDown className="w-5 h-5 text-white font-bold"/>
         </button>
         <button className='hero-prev hidden' aria-label='Previous slide' />
       </section>
