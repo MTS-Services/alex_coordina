@@ -16,8 +16,8 @@ const TemporaryWhiteLast: React.FC<TemporaryWhiteLastProps> = ({
   buttonText,
 }) => {
   return (
-    <section className="w-full bg-[#F5FAFC] py-6 sm:py-12 lg:py-14 px-2 sm:px-6 lg:px-8 ">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-col-reverse lg:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-14 mt-2 lg:mt-6 px-2 sm:px-6 lg:px-12 items-start lg:items-center mb-0 sm:mb-6 ">
+    <section className="w-full bg-[#F5FAFC] py-6 sm:py-12 lg:py-14 px-2 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row lg:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-14 mt-2 lg:mt-6 px-2 sm:px-6 lg:px-12 items-start lg:items-center mb-0 sm:mb-6">
         {/* Image Section */}
         <div className="w-full lg:w-1/2 h-full">
           <Image
@@ -42,7 +42,7 @@ const TemporaryWhiteLast: React.FC<TemporaryWhiteLastProps> = ({
 
           <Link
             href={"/bookdemo"}
-            className="w-full  sm:w-[200px] md:w-[180px] text-white h-[40px] sm:h-[50px] font-bold flex justify-center items-center text-[14px] sm:text-[16px] bg-[#00A3E0]  rounded-4xl"
+            className="w-full sm:w-[200px] md:w-[180px] text-white h-[40px] sm:h-[50px] font-bold flex justify-center items-center text-[14px] sm:text-[16px] bg-[#00A3E0] rounded-4xl"
           >
             {buttonText}
           </Link>
