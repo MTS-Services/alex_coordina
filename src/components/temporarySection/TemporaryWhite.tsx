@@ -4,7 +4,7 @@ import React from "react";
 const TemporaryWhite = ({ title, des, icon, image, buttonText }) => {
   return (
     <section className="w-full bg-[#F5FAFC] py-6 sm:py-12 lg:py-14 px-2 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-col-reverse lg:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-14 mt-6 px-2 sm:px-6 lg:px-12 items-start lg:items-center mb-0 sm:mb-6">
+      <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-col-reverse lg:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-14 mt-2 lg:mt-6 px-2 sm:px-6 lg:px-12 items-start lg:items-center mb-0 sm:mb-6">
         {/* Image Section */}
         <div className="flex justify-center md:justify-center lg:justify-start md:mb-6 lg:mb-0">
           <div className="w-full md:max-w-[550px] lg:max-w-[688px] h-auto rounded-4xl overflow-hidden">
@@ -37,7 +37,7 @@ const TemporaryWhite = ({ title, des, icon, image, buttonText }) => {
             <h2 className="text-[22px] md:text-[26px] lg:text-[28px] font-extrabold text-[#222222] mb-4 leading-snug">
               {title}
             </h2>
-            <p className="text-[#222222] mb-6 text-[15px] md:text-[15.5px] lg:text-[16px] font-medium leading-relaxed">
+            <p className="text-[#222222] mb-4 text-[15px] md:text-[15.5px] lg:text-[16px] font-medium leading-relaxed">
               {des}
             </p>
           </div>

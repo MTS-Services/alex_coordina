@@ -9,21 +9,20 @@ const Page = () => {
       id="temporary-works-page"
       className="flex flex-col items-center justify-start pt-24 sm:pt-26  "
     >
-      <div className="w-full max-w-2xl px-4 sm:px-6 mb-8 sm:mb-14  mx-auto">
-  <section className="flex flex-col items-center gap-4 sm:gap-12 pt-1 sm:pt-12">
-    <div className="flex flex-col items-center gap-2 sm:gap-4 text-center">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-8 sm:leading-9 text-neutral-800">
-        Temporary Works
-      </h1>
-      <p className="text-sm sm:text-base md:text-lg leading-6 sm:leading-7 text-neutral-800">
-        CoorDeck’s Temporary Works platform helps you plan, track, and
-        approve every asset digitally, reducing risk, preventing delays,
-        and keeping projects on schedule.
-      </p>
-    </div>
-  </section>
-</div>
-
+      <div className="w-full max-w-2xl px-4 sm:px-6 mb-6 sm:mb-14  mx-auto">
+        <section className="flex flex-col items-center gap-4 sm:gap-12 pt-1 sm:pt-12">
+          <div className="flex flex-col items-center gap-2 sm:gap-4 text-center">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-8 sm:leading-9 text-neutral-800">
+              Temporary Works
+            </h1>
+            <p className="text-sm sm:text-base md:text-lg leading-6 sm:leading-7 text-neutral-800">
+              CoorDeck’s Temporary Works platform helps you plan, track, and
+              approve every asset digitally, reducing risk, preventing delays,
+              and keeping projects on schedule.
+            </p>
+          </div>
+        </section>
+      </div>
 
       <TemporaryBlack
         title="Streamline TW Asset Management"
