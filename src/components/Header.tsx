@@ -248,7 +248,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
+import { IoMenu } from "react-icons/io5";
 import { MdOutlineArrowDropDown } from "react-icons/md";
+
+
 
 type DropItem = { label: string; href: string; id: string };
 
@@ -320,18 +323,18 @@ export default function Header() {
 
   // Scroll listener for floating button
   useEffect(() => {
-    const handleScroll = () => {
-      setShowFloating(window.scrollY >= window.innerHeight);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const handleScroll = () => {
+    setShowFloating(window.scrollY >= window.innerHeight / 2);
+  };
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
 
   const resourcesItem = NavItem.find((item) => item.id === "nav-resources");
   const products = resourcesItem?.PRODUCTS || [];
   const homeItem = NavItem.find((item) => item.id === "nav-home");
 
-  // Other links (Home, Products বাদ দেওয়া হলো)
   const OTHER_LINKS = NavItem.filter(
     (item) =>
       !["nav-home", "nav-signin", "nav-book-demo", "nav-products"].includes(
@@ -458,20 +461,7 @@ export default function Header() {
               aria-label="Toggle menu"
               onClick={() => setMobileOpen((v) => !v)}
             >
-              <svg
-                width="30"
-                height="30"
-                color="#000000"
-                viewBox="0 0 24 24"
-                aria-hidden
-              >
-                <path
-                  d="M4 6h16M4 12h16M4 18h16"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
+             <IoMenu className="w-12 h-12"/>
             </button>
           </div>
         </div>
@@ -539,7 +529,7 @@ export default function Header() {
       {/* Floating Button */}
       {homeItem && showFloating && (
         <Link href={homeItem.href}>
-          <div className="fixed bottom-6 right-6 w-12 h-12 p-3 bg-[#00A3E0] text-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer z-30">
+          <div className="fixed bottom-6 right-6 w-12 h-12 p-2 bg-[#00A3E0] text-white text-semibold rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer z-30">
             <Image
               src="/images/last_page_Rounded.png"
               alt="Next"

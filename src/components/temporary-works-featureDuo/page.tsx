@@ -112,9 +112,8 @@
 //   );
 // }
 
-
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 // Static, single-file component (no props). All content & images hardcoded.
 // Place these files in /public/images/ and keep the same names or update below:
@@ -126,96 +125,95 @@ import Link from 'next/link';
 export default function TemporaryWorksFeatureDuo() {
   return (
     <section
-      aria-label='Temporary Works features'
-      className='relative overflow-hidden '
+      aria-label="Temporary Works features"
+      className="relative overflow-hidden "
     >
       {/* Background */}
-      <div className='absolute inset-0 -z-10 opacity-60'>
+      <div className="absolute inset-0 -z-10 opacity-60">
         <Image
-          src='/images/bg.png'
-          alt=''
+          src="/images/bg.png"
+          alt=""
           fill
-          className='object-cover'
+          className="object-cover"
           priority
         />
       </div>
 
-      <div className='relative mx-auto max-w-7xl px-4 md:py-20 my-8 md:px-4 lg:px-6'>
+      <div className="relative mx-auto max-w-7xl px-4 md:py-20 my-8 md:px-4 lg:px-6">
         {/* Block 1: Copy left, media right */}
-        <div className='grid items-center md:gap-10 gap-4 md:grid-cols-2 lg:gap-24'>
-          <div className='order-2 md:order-1'>
-            <h2 className='text-2xl sm:text-3xl font-extrabold text-neutral-800 tracking-tight'>
+        <div className="grid items-center md:gap-10 gap-4 md:grid-cols-2 lg:gap-24">
+          <div className="order-2 md:order-1">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-800 tracking-tight">
               Streamline Temporary Works Management
             </h2>
-            <p className='md:mt-4 mt-2 text-base leading-7 text-neutral-700'>
+            <p className="md:mt-4 mt-2 text-base leading-7 text-neutral-700">
               Create, track, and close out TW assets with structured
               workflows—from initial design to permits, approvals, and final
               striking—built for site safety and compliance.
             </p>
-            <div className='md:mt-6 mt-3'>
+            <div className="md:mt-6 mt-3">
               <Link
-                href='/temporary-works'
-                className='inline-flex h-10 items-center justify-center rounded-full border border-gray-300 px-4 text-sm font-semibold leading-tight text-teal-950 transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-teal-600/30'
+                href="/temporary-works"
+                className="inline-flex h-10 items-center justify-center rounded-full border border-gray-300 px-4 text-sm font-semibold leading-tight text-teal-950 transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-teal-600/30"
               >
                 Learn more
               </Link>
             </div>
           </div>
 
-          <div className='relative order-1 md:order-2'>
-            <div className='relative  overflow-hidden'>
+          <div className="relative order-1 md:order-2">
+            <div className="relative  overflow-hidden">
               <Image
-                src='/images/resaltDashaboar.png'
-                alt='TW Management list view'
+                src="/images/resaltDashaboar.png"
+                alt="TW Management list view"
                 width={1248}
                 height={758}
-                sizes='(min-width: 1024px) 560px, (min-width: 768px) 50vw, 100vw'
-                className='h-auto w-full object-cover'
+                sizes="(min-width: 1024px) 560px, (min-width: 768px) 50vw, 100vw"
+                className="h-auto w-full object-cover"
               />
             </div>
-            <div className='absolute -right-3 bottom-[-10%] md:right-[-6%] md:bottom-[-6%] w-28 sm:w-36 overflow-hidden'>
+            <div className="absolute -right-3 bottom-[-10%] md:right-[-4%] md:bottom-[-4%] w-28 sm:w-36 overflow-hidden">
               <Image
-                src='/images/phoneversion.png'
-                alt='TW mobile view'
+                src="/images/phoneversion.png"
+                alt="TW mobile view"
                 width={320}
                 height={640}
-                sizes='(min-width: 640px) 144px, 112px'
-               className="w-full md:h-auto h-[40%] object-cover"
+                className="w-full h-[200px] md:h-auto object-cover"
               />
             </div>
           </div>
         </div>
 
         {/* Spacer */}
-        <div className='md:mt-24 mt-8' />
+        <div className="md:mt-24 mt-8" />
 
         {/* Block 2: Media left, copy right */}
-        <div className='grid items-center md:gap-10 gap-4 md:grid-cols-2 lg:gap-28'>
-          <div className='relative'>
-            <div className='relative w-full  overflow-hidden'>
+        <div className="grid items-center md:gap-10 gap-4 md:grid-cols-2 lg:gap-28">
+          <div className="relative">
+            <div className="relative w-full  overflow-hidden">
               <Image
-                src='/images/dashboar.png'
-                alt='Site drawing and zones'
+                src="/images/dashboar.png"
+                alt="Site drawing and zones"
                 width={1248}
                 height={758}
-                sizes='(min-width: 1024px) 560px, (min-width: 768px) 50vw, 100vw'
-                className='h-auto w-full object-cover'
+                sizes="(min-width: 1024px) 560px, (min-width: 768px) 50vw, 100vw"
+                className="h-auto w-full object-cover"
               />
             </div>
           </div>
 
           <div>
-            <h2 className='text-2xl sm:text-3xl font-extrabold text-neutral-800 tracking-tight'>
-              Organize and Navigate <span className='block'>Every Site</span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-800 tracking-tight">
+              Organize and Navigate <span className="block">Every Site</span>
             </h2>
-            <p className='md:mt-4 mt-2 text-base leading-7 text-neutral-700'>
+            <p className="md:mt-4 mt-2 text-base leading-7 text-neutral-700">
               Create sites, areas, and zones, view drawings by location, and
               draw asset polygons within zones for precise on‑site planning.
             </p>
-            <div className='md:mt-6 mt-4'>
+            <div className="md:mt-6 mt-4">
               <Link
-                href='/site-planning'
-                className='inline-flex h-10 items-center justify-center rounded-full border border-gray-300 px-6 text-sm font-semibold leading-tight text-teal-950 transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-teal-600/30'
+                href="/site-planning"
+                className="inline-flex h-10 items-center justify-center rounded-full border border-gray-300 px-6 text-sm font-semibold leading-tight text-teal-950 transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-teal-600/30"
               >
                 Learn more
               </Link>
