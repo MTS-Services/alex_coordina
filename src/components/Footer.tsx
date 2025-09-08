@@ -5,9 +5,7 @@ import Link from 'next/link';
 import { FaLinkedinIn, FaInstagram, FaFacebookF } from 'react-icons/fa';
 import { SiAppstore, SiGoogleplay } from 'react-icons/si';
 import Image from 'next/image';
-// =================code by shakil munshi==============
-// ---------- Types ----------
-// ====================================================
+
 type LinkItem = { label: string; href: string };
 type SectionDef = { title: string; items: LinkItem[]; aria?: string };
 
@@ -37,8 +35,6 @@ const SECTIONS: SectionDef[] = [
   { title: 'About', items: ABOUT_LINKS, aria: 'About' },
 ];
 
-// ---------- UI primitives ----------
-// =================code by shakil munshi==============
 function SocialIcon({
   label,
   href = '#',
@@ -72,9 +68,6 @@ function Section({
 }) {
   const id = useId().replace(':', '');
   const [open, setOpen] = useState(false);
-  // =================code by shakil munshi==============
-
-  // Close dropdown with Escape key (mobile)
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -86,12 +79,10 @@ function Section({
 
   return (
     <nav aria-label={ariaLabel || title} className='md:space-y-3'>
-      {/* Desktop title */}
       <h4 className='hidden md:block text-sm font-semibold text-white tracking-wide'>
         {title}
       </h4>
 
-      {/* Mobile dropdown header */}
       <button
         className='md:hidden w-full flex items-center justify-between py-3 border-t border-white/10 text-[15px] font-medium text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60'
         onClick={() => setOpen((v) => !v)}
