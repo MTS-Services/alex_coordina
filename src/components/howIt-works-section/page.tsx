@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import React from 'react';
 
 const HowItWorksSection = () => {
@@ -30,9 +31,9 @@ const HowItWorksSection = () => {
             className='inline-flex py-[10px] px-[48px] text-[16px]  font-[700] rounded-[30px] bg-[#00A3E0] hover:bg-sky-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sky-500 text-white  text-sm sm:text-base items-center justify-center 
                 transition'
           >
-            <span className='text-white text-base font-bold tracking-tight'>
+            <Link href={"/bookdemo"} className='text-white text-base font-bold tracking-tight'>
               Book a Demo
-            </span>
+            </Link>
           </button>
         </div>
       </div>
