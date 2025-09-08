@@ -30,6 +30,7 @@ export default function RootLayout({
     <html lang='en' className='scroll-smooth'>
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-white text-gray-900`}
+        suppressHydrationWarning
       >
         <div className='flex flex-col min-h-screen'>
           <Header />
