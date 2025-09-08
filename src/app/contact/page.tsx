@@ -3,7 +3,7 @@ import { FiMail, FiPhone, FiLinkedin, FiFacebook } from 'react-icons/fi';
 
 const ContactPage = () => {
   return (
-    <main className='flex items-center justify-center px-6 md:py-36 pt-24 pb-8'>
+    <main className='flex items-center justify-center px-6 md:py-36 pt-24 pb-8 h-screen my-auto'>
       <div className='flex w-full max-w-6xl flex-col items-center justify-center md:gap-16 gap-8 lg:flex-row lg:items-start lg:justify-between lg:gap-24'>
         <div className='flex w-full max-w-lg flex-col items-start md:gap-12 gap-5'>
           <div className='flex flex-col items-start md:gap-4 gap-2'>
@@ -45,14 +45,14 @@ const ContactPage = () => {
               <a
                 href='#'
                 aria-label='LinkedIn'
-                className='text-neutral-600 transition-colors hover:text-[#00A3E0]'
+                className='text-neutral-600 transition-colors hover:text-[#00A3E0] p-1.5 border rounded-[10px]'
               >
                 <FiLinkedin className='h-6 w-6' />
               </a>
               <a
                 href='#'
                 aria-label='Facebook'
-                className='text-neutral-600 transition-colors hover:text-[#00A3E0]'
+                className='text-neutral-600 transition-colors hover:text-[#00A3E0] p-1.5 border rounded-lg'
               >
                 <FiFacebook className='h-6 w-6' />
               </a>
