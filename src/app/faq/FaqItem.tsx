@@ -18,7 +18,7 @@ const FaqItem = ({ question, answer }: FaqItemProps) => {
         className="flex w-full items-center justify-between gap-4 p-4 text-left"
         aria-expanded={isOpen}
       >
-        <span className="flex-1 text-base font-bold text-neutral-800">
+        <span className="flex-1 text-base font-bold text-[#222222]">
           {question}
         </span>
         <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white">
@@ -35,7 +35,7 @@ const FaqItem = ({ question, answer }: FaqItemProps) => {
         }`}
       >
         <div className="overflow-hidden">
-          <p className="px-4 pb-4 text-base text-neutral-700">{answer}</p>
+          <p className="px-4 pb-4 text-base text-[#222222] font-normal">{answer}</p>
         </div>
       </div>
     </div>

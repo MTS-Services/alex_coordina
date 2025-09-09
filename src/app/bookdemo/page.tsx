@@ -75,7 +75,7 @@ const BookDemoPage = () => {
               <ul className='flex flex-col '>
                 {demoBenefits.map((benefit, index) => (
                   <li key={index} className='flex items-start gap-3'>
-                    <GoDotFill className='h-3 w-3 mt-2 flex-shrink-0' />
+                    <GoDotFill className='h-3 w-3 mt-2 text-black' />
                     <span className='text-base leading-loose text-neutral-800'>
                       {benefit}
                     </span>

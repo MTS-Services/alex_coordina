@@ -4,8 +4,11 @@ import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { MdOutlineArrowDropDown } from 'react-icons/md';
 import { CgPushChevronUp } from 'react-icons/cg';
+import { IoMenu } from 'react-icons/io5';
+import { FiChevronDown } from 'react-icons/fi';
 
 type DropItem = { label: string; href: string; id: string };
+
 const NavItem = [
   { id: 'nav-home', title: 'Home', href: '#home' },
   { id: 'nav-products', title: 'Products', href: '#products' },
@@ -38,7 +41,6 @@ const NavItem = [
       { label: 'Planning', href: '/products/planning', id: 'nav-planning' },
     ] as DropItem[],
   },
-  { id: 'nav-resources', title: 'Resources', href: '/resources' },
   { id: 'nav-about', title: 'About', href: '/about' },
   { id: 'nav-signin', title: 'Sign in', href: '/signin' },
   { id: 'nav-book-demo', title: 'Book a Demo', href: '/bookdemo' },
@@ -73,26 +75,25 @@ export default function Header() {
     return () => window.removeEventListener('keydown', onEsc);
   }, []);
 
-  // Scroll listener for floating button (show after h-screen scroll)
+  // Scroll listener for floating button
   useEffect(() => {
     const handleScroll = () => {
-      // scrollY >= 100vh
-      if (window.scrollY >= window.innerHeight) {
-        setShowFloating(true);
-      } else {
-        setShowFloating(false);
-      }
+      setShowFloating(window.scrollY >= window.innerHeight / 2);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Get Products array safely from NavItem
-  const products =
-    NavItem.find((item) => item.id === 'nav-resources')?.PRODUCTS || [];
-
-  // Floating button target (Home)
+  const resourcesItem = NavItem.find((item) => item.id === 'nav-resources');
+  const products = resourcesItem?.PRODUCTS || [];
   const homeItem = NavItem.find((item) => item.id === 'nav-home');
+
+  const OTHER_LINKS = NavItem.filter(
+    (item) =>
+      !['nav-home', 'nav-signin', 'nav-book-demo', 'nav-products'].includes(
+        item.id
+      )
+  );
 
   return (
     <>
@@ -104,7 +105,6 @@ export default function Header() {
               href='/'
               className='flex items-center gap-2'
               aria-label='CoorDeck Technologies'
-              id='nav-logo'
             >
               <Image
                 src='/images/logo.png'
@@ -116,7 +116,7 @@ export default function Header() {
               />
             </Link>
 
-            {/* Right group (desktop) */}
+            {/* Desktop Nav */}
             <div className='hidden md:flex items-center gap-6'>
               <nav className='relative flex items-center gap-8' ref={menuRef}>
                 {/* Products dropdown */}
@@ -127,9 +127,10 @@ export default function Header() {
                     setOpenProducts(true);
                   }}
                   onMouseLeave={() => {
-                    timeoutRef.current = setTimeout(() => {
-                      setOpenProducts(false);
-                    }, 200);
+                    timeoutRef.current = setTimeout(
+                      () => setOpenProducts(false),
+                      200
+                    );
                   }}
                 >
                   <button
@@ -143,7 +144,6 @@ export default function Header() {
                     aria-haspopup='menu'
                     aria-expanded={openProducts}
                     onClick={() => setOpenProducts((v) => !v)}
-                    id='nav-products-btn'
                   >
                     Products
                     <MdOutlineArrowDropDown
@@ -154,11 +154,9 @@ export default function Header() {
                       aria-hidden
                     />
                   </button>
+
                   {openProducts && (
-                    <div
-                      className='absolute left-1/2 z-50 mt-1 w-72 -translate-x-1/2 rounded-xl border border-black/5 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.08)] ring-1 ring-black/5 transition-all duration-200 ease-in-out'
-                      role='menu'
-                    >
+                    <div className='absolute left-1/2 z-50 mt-3 w-72 -translate-x-1/2 rounded-xl border border-black/5 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.08)] ring-1 ring-black/5'>
                       <ul className='py-2'>
                         {products.map((it) => (
                           <li key={it.href}>
@@ -178,30 +176,19 @@ export default function Header() {
                   )}
                 </div>
 
-                {/* Other links */}
-                {NavItem.filter(
-                  (item) =>
-                    !item.PRODUCTS &&
-                    ![
-                      'nav-home',
-                      'nav-products',
-                      'nav-signin',
-                      'nav-book-demo',
-                    ].includes(item.id)
-                ).map((item) => (
+                {/* Other links (includes Resources, About, etc.) */}
+                {OTHER_LINKS.map((item) => (
                   <Link
                     key={item.id}
                     href={item.href}
                     className='inline-flex items-center gap-1 text-[16px] text-[#222222] font-[600] hover:text-gray-900'
-                    id={item.id}
                   >
                     {item.title}
-                    <MdOutlineArrowDropDown className='opacity-60' />
                   </Link>
                 ))}
               </nav>
 
-              {/* CTAs */}
+              {/* CTA buttons */}
               <div className='flex items-center gap-3'>
                 {NavItem.filter((item) =>
                   ['nav-signin', 'nav-book-demo'].includes(item.id)
@@ -214,7 +201,6 @@ export default function Header() {
                         ? 'inline-flex items-center rounded-full border border-gray-300 px-4 py-2 text-sm text-[#222] font-[600] hover:bg-gray-50'
                         : 'inline-flex items-center rounded-full bg-gray-900 px-4 py-[10px] text-sm font-[600] text-white hover:bg-gray-800'
                     )}
-                    id={item.id}
                   >
                     {item.title}
                   </Link>
@@ -222,30 +208,75 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Mobile hamburger */}
+            {/* Mobile Hamburger */}
             <button
               className='md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md text-[#222222] font-bold'
               aria-label='Toggle menu'
               onClick={() => setMobileOpen((v) => !v)}
-              id='nav-hamburger'
             >
-              <svg
-                width='30'
-                height='30'
-                color='#000000'
-                viewBox='0 0 24 24'
-                aria-hidden
-              >
-                <path
-                  d='M4 6h16M4 12h16M4 18h16'
-                  stroke='currentColor'
-                  strokeWidth='2'
-                  strokeLinecap='round'
-                />
-              </svg>
+              <IoMenu className='w-12 h-12' />
             </button>
           </div>
         </div>
+
+        {/* Mobile panel */}
+        {mobileOpen && (
+          <div className='md:hidden border-t border-gray-200 bg-white'>
+            <div className='mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8'>
+              <details className='group'>
+                <summary className='flex text-[#222222] font-[600] text-[16px] cursor-pointer list-none items-center justify-between py-2 text-sm'>
+                  <span>Products</span>
+                  <FiChevronDown className='transition-transform group-open:rotate-180' />
+                </summary>
+                <ul className='pb-0.5'>
+                  {products.map((it) => (
+                    <li key={it.href}>
+                      <Link
+                        href={it.href}
+                        className='block rounded-md px-3 py-2 text-sm text-gray-700 hover:bg-gray-100'
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        {it.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </details>
+
+              {OTHER_LINKS.map((item) => (
+                <Link
+                  key={item.id}
+                  href={item.href}
+                  className='block py-2 text-[#222222] font-[600] text-[16px]'
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {item.title}
+                </Link>
+              ))}
+
+              <hr className='my-3' />
+
+              <div className='flex items-center gap-3'>
+                {NavItem.filter((item) =>
+                  ['nav-signin', 'nav-book-demo'].includes(item.id)
+                ).map((item) => (
+                  <Link
+                    key={item.id}
+                    href={item.href}
+                    className={cls(
+                      item.id === 'nav-signin'
+                        ? 'inline-flex flex-1 items-center justify-center rounded-full border border-gray-300 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'
+                        : 'inline-flex flex-1 items-center justify-center rounded-full bg-gray-900 px-4 py-2 text-sm font-bold text-white hover:bg-gray-800'
+                    )}
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {item.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </header>
       {/* Floating Button (Dynamic Home) */}
       {homeItem && showFloating && (
