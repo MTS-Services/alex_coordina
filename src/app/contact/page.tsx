@@ -5,7 +5,7 @@ import { FiMail, FiPhone, FiLinkedin, FiFacebook } from "react-icons/fi";
 const ContactPage = () => {
   return (
     <div className="max-w-7xl mx-auto grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-6 items-center h-screen md:my-0 mt-[100px] md:mb-0 mb-[200px] px-4 sm:px-6 lg:px-14">
-      <div className="col-span-1 h-auto">
+      <div className="col-span-1 w-full md:mb-36">
         <h2 className="text-[28px] font-bold text-[#222222] md:mb-14 mb-3">
           Contact Us
         </h2>
@@ -55,6 +55,7 @@ const ContactPage = () => {
           </a>
         </div>
       </div>
+
       <div className="bg-[#F5FAFC] rounded-2xl w-full md:mt-0 mt-3">
         <form className="rounded-2xl md:p-10 p-5">
           <div className="w-full">
