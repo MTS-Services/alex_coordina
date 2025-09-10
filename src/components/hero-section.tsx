@@ -2,11 +2,11 @@
 import React from 'react';
 import { FiHome, FiFileText, FiUsers } from 'react-icons/fi';
 
-export default function FeatureRail() {
+const FeatureRail = () => {
   return (
-    <section className='w-full bg-[#1f2b31]'>
+   <section className='w-full bg-[#1f2b31]'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-14'>
-        <ul className='grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 lg:gap-24 py-8 md:py-16'>
+        <ul className='grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 lg:gap-24 py-6 md:py-9'>
           {/* Item 1 */}
           <li
             className='relative flex md:flex-col items-center md:items-start gap-4
@@ -54,5 +54,7 @@ export default function FeatureRail() {
         </ul>
       </div>
     </section>
-  );
+  )
 }
+
+export default FeatureRail

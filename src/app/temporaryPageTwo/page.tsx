@@ -1,3 +1,4 @@
+import FeatureRail from "@/components/hero-section";
 import HowItWorksSection from "@/components/howIt-works-section/page";
 import HeroConnectedSection from "@/components/jero-connected-section/page";
 import FixYouDown from "@/components/shareComponents/FixYouDown";
@@ -13,6 +14,7 @@ const page = () => {
         image={"/images/hero.png"}
         title={"Construction Simplified."}
       />
+      <FeatureRail />
       <MultipleSection />
       <FixYouDown />
       <HowItWorksSection />

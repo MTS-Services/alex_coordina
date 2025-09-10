@@ -28,15 +28,17 @@ export default function HeroConnectedSection({
   image,
 }: HeroConnectedSectionProps) {
   const slideContent = (
-    <div className="relative w-full h-[560px] lg:h-[640px] xl:h-[720px]">
-      <Image
-        src={image}
-        alt="Construction project management"
-        fill
-        priority
-        className="bg-cover object-cover w-full h-full"
-        sizes="100vw"
-      />
+    <div className="relative w-full h-[560px] lg:h-[640px] xl:h-[730px]">
+      <div className="">
+        <Image
+          src={image}
+          alt="Construction project management"
+          fill
+          priority
+          className="bg-cover object-cover w-full h-full"
+          sizes="100vw"
+        />
+      </div>
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
       <div className="relative z-10 flex h-full items-center">
         <div className="w-full mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
