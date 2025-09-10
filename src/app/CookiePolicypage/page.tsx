@@ -1,13 +1,13 @@
 import React from 'react';
 
-const PrivacyPolicyPage = () => {
+const CookiePolicypage = () => {
   return (
-    <main className='flex flex-col items-center justify-start min-h-screen px-6 py-24 md:py-32'>
+    <main className='flex flex-col items-center justify-start px-6 py-12   md:py-32'>
       <div className='w-full max-w-4xl'>
         <section className='flex flex-col items-center gap-8'>
           <div className='flex flex-col items-center gap-4 text-center'>
-            <h1 className='text-4xl font-extrabold tracking-tight text-neutral-900'>
-              Terms & Conditions
+            <h1 className='text-2xl lg:text-4xl font-extrabold tracking-tight text-neutral-900 mt-20'>
+              Cookie Policy
             </h1>
           </div>
 
@@ -26,4 +26,4 @@ const PrivacyPolicyPage = () => {
   );
 };
 
-export default PrivacyPolicyPage;
+export default CookiePolicypage;
