@@ -218,7 +218,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className='py-4 text-[12px] text-slate-400/80 border-t border-white/10'>
+        <div className='flex items-center justify-between py-4 text-[12px] text-slate-400/80 border-t border-white/10'>
           <p>© {year} CoorDeck Technologies. All rights reserved.</p>
           <div className='flex gap-4 justify-end '>
             <Link
