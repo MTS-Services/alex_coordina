@@ -23,8 +23,8 @@ const NavItem = [
         id: 'nav-temporary-works',
       },
       {
-        label: 'Temporary Two',
-        href: '/temporaryPageTwo',
+        label: 'Asset Management',
+        href: '/resources',
         id: 'nav-asset-management',
       },
       { label: 'Logistics', href: '/products/logistics', id: 'nav-logistics' },
