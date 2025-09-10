@@ -14,14 +14,14 @@ const HowItWorksSection = () => {
       {/* Dark overlay (optional for readability on mobile) */}
 
       <div className='sm:px-30 px-0'>
-        <div className='relative md:px-5 px-0 z-10 w-full max-w-[500px] flex flex-col items-center sm:items-start text-center sm:text-left gap-6'>
+        <div className='relative md:px-5 px-0 z-10 w-full max-w-7xl flex flex-col items-center sm:items-start text-center sm:text-left gap-6'>
           {/* Heading */}
           <h2 className='text-[#222] text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-snug sm:leading-tight tracking-tight'>
             See How It Works
           </h2>
 
           {/* Sub Text */}
-          <p className='text-[#222] text-base sm:text-lg md:text-xl font-medium leading-relaxed max-w-[420px]'>
+          <p className='text-[#222] text-base sm:text-lg md:text-xl font-medium leading-relaxed max-w-[320px]'>
             Get a clear view of how CoorDeck simplifies construction project
             management.
           </p>
