@@ -1,3 +1,4 @@
+import AllPolicy from "@/components/AllPolicy/AllPolicy";
 import FeatureRail from "@/components/hero-section";
 import HowItWorksSection from "@/components/howIt-works-section/page";
 import HeroConnectedSection from "@/components/jero-connected-section/page";
@@ -18,6 +19,7 @@ const page = () => {
       <MultipleSection />
       <FixYouDown />
       <HowItWorksSection />
+      <AllPolicy />
     </div>
   );
 };
