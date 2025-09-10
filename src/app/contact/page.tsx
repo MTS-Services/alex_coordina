@@ -22,7 +22,7 @@ const ContactPage = () => {
             href='mailto:Info@coordeck.com'
             className='group flex items-center md:gap-5 gap-4'
           >
-            <FiMail className='h-[24px] w-[24px] text-neutral-600 transition-colors group-hover:text-neutral-900' />
+            <FiMail className='h-6 w-5 lg:h-[24px] lg:w-[24px] text-neutral-600 transition-colors group-hover:text-neutral-900' />
             <span className='text-base font-medium tracking-wide text-black transition-colors group-hover:text-neutral-700'>
               Info@coordeck.com
             </span>
@@ -31,7 +31,7 @@ const ContactPage = () => {
             href='tel:+44-123456789'
             className='group flex items-center md:gap-5 gap-4'
           >
-            <FiPhone className='h-[24px] w-[24px] text-neutral-600 transition-colors group-hover:text-neutral-900' />
+            <FiPhone className='h-6 w-5 lg:h-[24px] lg:w-[24px] text-neutral-600 transition-colors group-hover:text-neutral-900' />
             <span className='text-base font-medium tracking-wide text-black transition-colors group-hover:text-neutral-700'>
               +44-123456789
             </span>
@@ -43,14 +43,14 @@ const ContactPage = () => {
             aria-label='LinkedIn'
             className='text-neutral-600 transition-colors hover:text-[#00A3E0] p-1.5 border rounded-[10px]'
           >
-            <FiLinkedin className='h-6 w-6' />
+            <FiLinkedin className='h-4 w-4 lg:h-6 lg:w-6' />
           </a>
           <a
             href='#'
             aria-label='Facebook'
             className='text-neutral-600 transition-colors hover:text-[#00A3E0] p-1.5 border rounded-lg'
           >
-            <FiFacebook className='h-6 w-6' />
+            <FiFacebook className='h-4 w-4 lg:h-6 lg:w-6' />
           </a>
         </div>
       </div>
