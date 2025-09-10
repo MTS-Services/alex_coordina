@@ -1,9 +1,7 @@
-// components/HeroConnectedSection.tsx
-'use client';
-
-import Image from 'next/image';
-import Link from 'next/link';
-import { Swiper, SwiperSlide } from 'swiper/react';
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { IoIosArrowDown } from "react-icons/io";
 
 import {
@@ -12,42 +10,48 @@ import {
   Keyboard,
   Mousewheel,
   Autoplay,
-} from 'swiper/modules';
+} from "swiper/modules";
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-export default function HeroConnectedSection() {
+type HeroConnectedSectionProps = {
+  title: string;
+  description: string;
+  image: string;
+};
+
+export default function HeroConnectedSection({
+  title,
+  description,
+  image,
+}: HeroConnectedSectionProps) {
   const slideContent = (
-    <div className='relative w-full h-[560px] lg:h-[640px] xl:h-[720px]'>
+    <div className="relative w-full h-[560px] lg:h-[640px] xl:h-[720px]">
       <Image
-        src='/images/hero.png'
-        alt='Construction project management'
+        src={image}
+        alt="Construction project management"
         fill
         priority
-        className='object-cover'
-        sizes='100vw'
+        className="bg-cover object-cover w-full h-full"
+        sizes="100vw"
       />
-      <div className='absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent' />
-      <div className='relative z-10 flex h-full items-center'>
-        <div className='w-full mx-auto max-w-7xl px-5 sm:px-8 lg:px-12'>
-          <div className='max-w-xl sm:max-w-2xl lg:max-w-3xl'>
-            <h1 className='text-[#FFF] md:font-[800] font-semibold tracking-tight leading-[1.05]  text-4xl sm:text-5xl lg:text-[57px]'>
-              Connected Teams
-              <br />
-              Coordinated Projects
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
+      <div className="relative z-10 flex h-full items-center">
+        <div className="w-full mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+          <div className="max-w-xl sm:max-w-2xl lg:max-w-3xl">
+            <h1 className="text-white md:font-extrabold font-semibold tracking-tight leading-[1.05]  text-4xl sm:text-5xl lg:text-[57px]">
+              {title}
             </h1>
-            <p className='mt-4 text-[#FFF] text-base sm:text-lg lg:text-[22px]  font-[500] leading-relaxed'>
-              Manage your sites, coordinate teams, and keep every task on track.
-              Your all-in-one solution for seamless construction Project
-              management.
+            <p className="mt-4 text-white text-base sm:text-lg lg:text-[22px]  font-medium leading-relaxed">
+              {description}
             </p>
-            <div className='mt-6'>
+            <div className="mt-6">
               <Link
-                href='/bookdemo'
-                className='inline-flex py-[10px] px-[48px] text-[16px]  font-[700] rounded-[30px] bg-[#00A3E0] hover:bg-sky-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sky-500 text-white  text-sm sm:text-base items-center justify-center 
-                transition'
+                href="/bookdemo"
+                className="inline-flex py-[10px] px-[48px] text-[16px]  font-[700] rounded-[30px] bg-[#00A3E0] hover:bg-sky-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sky-500 text-white  text-sm sm:text-base items-center justify-center 
+                transition"
               >
                 Book a Demo
               </Link>
@@ -93,7 +97,7 @@ export default function HeroConnectedSection() {
         }
       `}</style>
 
-      <section className='relative isolate min-h-[560px] lg:min-h-[640px] xl:min-h-[720px] overflow-hidden'>
+      <section className="relative isolate min-h-[560px] lg:min-h-[640px] xl:min-h-[720px] overflow-hidden">
         <Swiper
           modules={[Navigation, Pagination, Keyboard, Mousewheel, Autoplay]}
           slidesPerView={1}
@@ -102,9 +106,9 @@ export default function HeroConnectedSection() {
           autoplay={{ delay: 5000, disableOnInteraction: false }}
           keyboard={{ enabled: true }}
           mousewheel={{ forceToAxis: true }}
-          pagination={{ clickable: true, type: 'bullets' }}
-          navigation={{ nextEl: '.hero-next', prevEl: '.hero-prev' }}
-          className='w-full h-full hero-swiper'
+          pagination={{ clickable: true, type: "bullets" }}
+          navigation={{ nextEl: ".hero-next", prevEl: ".hero-prev" }}
+          className="w-full h-full hero-swiper"
         >
           {[...Array(5)].map((_, i) => (
             <SwiperSlide key={i}>{slideContent}</SwiperSlide>
@@ -112,12 +116,12 @@ export default function HeroConnectedSection() {
         </Swiper>
 
         <button
-          aria-label='Next slide'
-          className='hero-next absolute left-1/2 -translate-x-1/2 bottom-6 z-20 h-10 w-10 text-white rounded-full bg-gray-800/85 hover:bg-gray-900/90 flex items-center justify-center shadow-lg backdrop-blur transition-all duration-200'
+          aria-label="Next slide"
+          className="hero-next absolute left-1/2 -translate-x-1/2 bottom-6 z-20 h-10 w-10 text-white rounded-full bg-gray-800/85 hover:bg-gray-900/90 flex items-center justify-center shadow-lg backdrop-blur transition-all duration-200"
         >
-          <IoIosArrowDown className="w-5 h-5 text-white font-bold"/>
+          <IoIosArrowDown className="w-5 h-5 text-white font-bold" />
         </button>
-        <button className='hero-prev hidden' aria-label='Previous slide' />
+        <button className="hero-prev hidden" aria-label="Previous slide" />
       </section>
     </>
   );

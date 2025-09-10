@@ -24,7 +24,7 @@ const NavItem = [
       },
       {
         label: 'Asset Management',
-        href: '/products/asset-management',
+        href: '/resources',
         id: 'nav-asset-management',
       },
       { label: 'Logistics', href: '/products/logistics', id: 'nav-logistics' },

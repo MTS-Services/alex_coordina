@@ -11,7 +11,7 @@ const teamMembers = [
     imageSrc: '/images/about/2.png',
     name: 'Alex Sporyk',
     title: 'CTO',
-    bio: "Siu is a highly experienced civil engineer with over 23 years in the construction industry. She is a director of the UK's Temporary Works forum.",
+    bio: "Praesent at orci sed lorem viverra posuere. Nulla facilisi. Cras tincidunt sapien ut libero fermentum, vitae tempus justo luctus.",
   },
 ];
 
