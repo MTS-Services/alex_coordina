@@ -1,5 +1,5 @@
 import TeamMemberCard from './TeamMemberCard';
-
+// --------
 const teamMembers = [
   {
     imageSrc: '/images/about/1.png',
@@ -11,7 +11,7 @@ const teamMembers = [
     imageSrc: '/images/about/2.png',
     name: 'Alex Sporyk',
     title: 'CTO',
-    bio: "Praesent at orci sed lorem viverra posuere. Nulla facilisi. Cras tincidunt sapien ut libero fermentum, vitae tempus justo luctus.",
+    bio: 'Praesent at orci sed lorem viverra posuere. Nulla facilisi. Cras tincidunt sapien ut libero fermentum, vitae tempus justo luctus.',
   },
 ];
 
